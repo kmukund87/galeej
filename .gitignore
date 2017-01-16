@@ -1,0 +1,6 @@
+*.dll
+*.pdb
+loadTesting/packages/*
+loadTesting/loadTesting/obj
+loadTesting/loadTesting/bin
+loadTesting/packages/*
