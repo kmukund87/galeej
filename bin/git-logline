@@ -1,0 +1,14 @@
+#!/bin/bash
+hash="%Cred%h%Creset"
+branches="%C(yellow)%D%Creset"
+length=$(($COLUMNS-120))
+message="%<($length,trunc)%s"
+date="%Cgreen%cd%Creset" # Absolute timestamp
+date="%Cgreen%cr%Creset" # Relative date
+author="%C(bold blue)%an%Creset"
+
+git -c color.ui=always log --graph --pretty=format:"$hash|$branches|$message|$date|$author" --abbrev-commit -10 "$@"\
+   | sed "s/HEAD -> //" \
+   | sed -E "s/origin\/HEAD(, )?//" \
+   | column -t -s '|'
+

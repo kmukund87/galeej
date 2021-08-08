@@ -1,0 +1,8 @@
+#!/bin/bash
+
+cd /Users/mukundkumar/carrot/customers/instacart
+
+script/seed 94105 1
+
+rails runner "DeliveryHourService.fill_in_month(zone_id: 1)"
+rails runner "DeliveryOptionCreationService.create_delivery_options_for_week(warehouse_id: 1, zone_id: 1)"

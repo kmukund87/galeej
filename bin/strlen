@@ -1,0 +1,4 @@
+#!/bin/bash
+awk -v max=-1 '
+  {l = length}
+  l > max {max = l; output = "Max length: " max RS}'

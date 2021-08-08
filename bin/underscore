@@ -1,0 +1,2 @@
+#!/bin/bash
+sed 's/\([a-z0-9]\)\([A-Z]\)/\1_\2/g' | tr '[:upper:]' '[:lower:]'
