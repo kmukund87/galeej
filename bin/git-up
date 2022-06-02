@@ -1,7 +1,3 @@
 #!/bin/bash
 branch=$(git branch --show-current)
-cd ~/carrot/customers/instacart
-run-rubocop
-cd ~/carrot/customers/customers-backend
-run-rubocop
-git push origin $branch
+git push origin $branch "${@:1}"

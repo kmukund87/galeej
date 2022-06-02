@@ -7,7 +7,7 @@ line
 branches=`git -c color.branch=always branch --sort=-committerdate -vv`
 files=`git -c color.status=false status --short --untracked-files=no `
 
-paste -d "▓" <(echo "$files") <(echo "$branches") | sed "s/▓/ ▓▏ /g" | column -t -s '▓' | cut -c-$COLUMNS | sed "s/^\(.\)/"$'\033\[94m&\033\[0m/'
+paste -d "▓" <(echo "$files") <(echo "$branches") | sed "s/▓/ ▓▏ /g" | column -t -s '▓' | cut -c-$(tput cols) | sed "s/^\(.\)/"$'\033\[94m&\033\[0m/'
 
 line
 git logline -10
