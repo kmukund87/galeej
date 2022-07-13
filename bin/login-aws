@@ -1,2 +1,0 @@
-#!bin/bash
-isc login aws --ignore-default

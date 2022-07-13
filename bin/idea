@@ -1,3 +1,2 @@
 #!/bin/sh
-
-open -a "RubyMine.app" "$@"
+open -a "LI IntelliJ IDEA 2021.3 Apple Silicon.app" "$@"

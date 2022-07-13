@@ -1,0 +1,12 @@
+#!/bin/bash
+product=$1
+new_version=$2
+
+if [ -z "$new_version" ]
+then
+  jq '.product."'$product'".version' product-spec.json
+else
+  jq '.product."'$product'".version = "'$new_version'"' product-spec.json > product-spec2.json
+  diff product-spec.json product-spec2.json
+  mv product-spec2.json product-spec.json
+fi

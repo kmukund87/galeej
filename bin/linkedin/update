@@ -1,0 +1,5 @@
+#!/bin/bash
+mp=$1
+cd $mp
+echo "Going to update $mp"
+mint update

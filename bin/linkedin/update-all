@@ -1,0 +1,8 @@
+#!/bin/bash
+mps=$(ls | grep hs-)
+
+for mp in $mps
+do
+  echo "updating $mp"
+  update $mp
+done

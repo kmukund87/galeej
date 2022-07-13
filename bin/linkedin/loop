@@ -1,0 +1,9 @@
+#!/bin/bash
+mps=$(ls | grep hs-)
+
+for mp in $mps
+do
+  cd $mp
+  echo "MP: $mp" `ver galene-verticals7`
+  cd ~/hs-sources
+done

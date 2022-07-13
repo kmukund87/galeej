@@ -7,24 +7,13 @@ set statusline=%r%m%f\ line:\ %l\ col:\ %c
 set mouse=a
 set autoindent
 set tabstop=2 shiftwidth=2 expandtab
+set nowrap
 syntax on
-
-" Copy and paste with \c and \v. Note Cmd + v always available in insert mode
-map <Leader>c "+y
-map <Leader>v "+p
 
 " Diff colors
 hi DiffText   cterm=none ctermfg=Black ctermbg=Red gui=none guifg=Black guibg=Red
 hi DiffChange cterm=none ctermfg=Black ctermbg=LightMagenta gui=none guifg=Black guibg=LightMagenta
 
-" Change CamelCase to under_score and accept numbers in name.
-command -range UnderScore :<line1>,<Line2>s#\C\(\<\u[a-z0-9]\+\|[a-z0-9]\+\)\(\u\)#\l\1_\l\2#g
-
-" Change under_score to CamelCase
-command -range CamelCase :<line1>,<Line2>s#\(\%(\<\l\+\)\%(_\)\@=\)\|_\(\l\)#\u\1\2#g
-
-" Json
-command Json :%!jq .
 
 colorscheme pablo
 
@@ -39,7 +28,6 @@ set guicursor=n-v-c:block-Cursor
 set guicursor+=i:ver100-iCursor
 set guicursor+=n-v-c:blinkon0
 set guicursor+=i:blinkwait10
-
 
 function! DoPrettyXML()
   " save the filetype so we can restore it later
@@ -69,3 +57,23 @@ function! DoPrettyXML()
   exe "set ft=" . l:origft
 endfunction
 command! PrettyXML call DoPrettyXML()
+
+" Copy and paste with \c and \v. Note Cmd + v always available in insert mode
+map <Leader>c "+y
+map <Leader>v "+p
+map <Leader>J :%!jq .<Enter>
+
+map <Leader>X :%g/\(<configuration-source\|<\/application>\|<\?xml\|<application \|<\/configuration-source\|value="${seas.cloud.\)/d
+
+" Json
+command Json :%!jq .
+
+" Change CamelCase to under_score and accept numbers in name.
+command -range UnderScore :<line1>,<Line2>s#\C\(\<\u[a-z0-9]\+\|[a-z0-9]\+\)\(\u\)#\l\1_\l\2#g
+
+" Change under_score to CamelCase
+command -range CamelCase :<line1>,<Line2>s#\(\%(\<\l\+\)\%(_\)\@=\)\|_\(\l\)#\u\1\2#g
+
+call plug#begin()
+Plug 'preservim/NERDTree'
+call plug#end()

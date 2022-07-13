@@ -1,0 +1,1 @@
+ jq ".value.elements[].stringUid" "${@:1}"
