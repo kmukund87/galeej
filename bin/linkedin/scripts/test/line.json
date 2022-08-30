@@ -1,0 +1,2202 @@
+{
+  "evalBrokerRequest": {
+    "hostedContext": {
+      "tenantContext": {
+        "originalBrokerRequest": {
+          "memberContext": {
+            "member": "urn:li:member:194949132"
+          },
+          "metadata": {
+            "segments": [
+              {
+                "name": "pageKey",
+                "value": "d_talent_recruiter_search"
+              },
+              {
+                "enableInGraphTracking": true,
+                "name": "searchOrigin",
+                "value": "API"
+              }
+            ]
+          },
+          "other": {
+            "SORT_BY": "CREATED_TIME",
+            "SORT_ORDER": "DESCENDING",
+            "hostedSearchTenantIndexName": "hiringproject_index1",
+            "paginateInBroker": "true",
+            "trackingEnabled": "true"
+          },
+          "paginationContext": {
+            "numToReturn": 4,
+            "startFilter": 0
+          },
+          "queryContext": {
+            "facetRequests": [
+              {
+                "countEnabled": true,
+                "name": "total",
+                "values": []
+              },
+              {
+                "countEnabled": true,
+                "name": "state",
+                "values": [
+                  {
+                    "selected": true,
+                    "value": "ACTIVE"
+                  }
+                ]
+              }
+            ],
+            "mergerDocDataSet": "fieldSort",
+            "numToCount": 10000,
+            "numToDiscover": 50000,
+            "numToScore": 500,
+            "rawQuery": "Resol",
+            "rewrittenQuery": "+(?(+hiringContext:{urn:li:contract:25474301} +(?viewableBy:{urn:li:seat:263764506})) ?(+hiringContext:{urn:li:contract:25474301} +visibility:{HIRING_CONTEXT})) +(?(?prefixName:{resol} ?tokenName:{resol}) ?(?prefixJobTitle:{resol} ?tokenJobTitle:{resol}))",
+            "searchOrigin": "API",
+            "searchTime": 1661296457567,
+            "searchType": "INSTANT"
+          },
+          "searchContext": {
+            "experiments": {
+              "mcm.hiringproject.search.hiregroup.enabled": "enabled"
+            }
+          },
+          "verticalContext": {
+            "hiringproject": {
+              "contract": "urn:li:contract:25474301",
+              "seat": "urn:li:seat:263764506",
+              "viewerParams": [
+                {
+                  "contract": "urn:li:contract:25474301",
+                  "enforcement": "SHOULD",
+                  "hireGroups": [],
+                  "hiringProjectViewVisibility": "VIEWER_HAS_ROLES_IN",
+                  "viewer": "urn:li:seat:263764506"
+                },
+                {
+                  "contract": "urn:li:contract:25474301",
+                  "enforcement": "SHOULD",
+                  "hiringProjectViewVisibility": "PUBLIC",
+                  "viewer": "urn:li:seat:263764506"
+                }
+              ]
+            }
+          }
+        },
+        "sortOption": {
+          "sortByType": "CREATED_TIME",
+          "sortOrder": "DESCENDING"
+        },
+        "viewerContext": {
+          "member": "urn:li:member:194949132",
+          "seat": "urn:li:seat:263764506"
+        }
+      },
+      "tenantId": "hiringproject_index1"
+    },
+    "paginationContext": {
+      "numToReturn": 4,
+      "startFilter": 0
+    },
+    "queryContext": {
+      "docDataFields": [
+        "capSavedSearch",
+        "createdTime",
+        "experienceLevel",
+        "geoLocations",
+        "hiringContext",
+        "jobBingGeoIds",
+        "jobFunctions",
+        "jobPosterMemberId",
+        "lastAccessTime",
+        "lastModifiedTime",
+        "name",
+        "originalJobListTime",
+        "owner",
+        "standardizedTitleId",
+        "state",
+        "type"
+      ],
+      "facetRequests": [
+        {
+          "countEnabled": true,
+          "maxValues": 10,
+          "name": "state",
+          "values": [
+            {
+              "selected": true,
+              "value": "ACTIVE"
+            }
+          ]
+        }
+      ],
+      "numToScore": 500,
+      "rewrittenQuery": "+(?(+hiringContext:{urn:li:contract:25474301} +(?viewableBy:{urn:li:seat:263764506})) ?(+hiringContext:{urn:li:contract:25474301} +visibility:{HIRING_CONTEXT})) +(?(?prefixName:{resol} ?tokenName:{resol}) ?(?prefixJobTitle:{resol} ?tokenJobTitle:{resol}))",
+      "totalCountEnabled": true
+    }
+  },
+  "evalResponse": {
+    "calltimeInMillis": 1452.709591,
+    "cluster": "gallium",
+    "response": {
+      "brokerResponse": {
+        "elements": [
+          {
+            "docData": {
+              "capSavedSearch": [],
+              "createdTime": 1648618328000,
+              "experienceLevel": "ASSOCIATE",
+              "geoLocations": [
+                "urn:li:geo:102394087"
+              ],
+              "hiringContext": "urn:li:contract:25474301",
+              "jobBingGeoIds": [
+                101318387,
+                104653787,
+                103644278,
+                90000056,
+                102394087
+              ],
+              "jobPosterMemberId": 360280777,
+              "lastAccessTime": 1661296019,
+              "lastModifiedTime": 1648618402609,
+              "name": "Clinical Systems Analyst 2 (Resolute Physician Billing)",
+              "originalJobListTime": 1648618328,
+              "owner": "urn:li:seat:262400656",
+              "state": "ACTIVE",
+              "type": "RECRUITER"
+            },
+            "entity": "urn:li:hiringProject:-1",
+            "hostedOtherInfo": {},
+            "score": 1648618328000,
+            "scoreMap": {
+              "CREATED_TIME_BASED_SORT_FEATURE": 1648618328000
+            },
+            "staticRank": 0,
+            "stringUid": "3826076797379797204"
+          },
+          {
+            "docData": {
+              "capSavedSearch": [],
+              "createdTime": 1648618140000,
+              "experienceLevel": "DIRECTOR",
+              "geoLocations": [
+                "urn:li:geo:102394087"
+              ],
+              "hiringContext": "urn:li:contract:25474301",
+              "jobBingGeoIds": [
+                90000056,
+                104653787,
+                101318387,
+                103644278,
+                102394087
+              ],
+              "jobPosterMemberId": 360280777,
+              "lastAccessTime": 1654535009,
+              "lastModifiedTime": 1652709511510,
+              "name": "Director IT, Resolute Billing",
+              "originalJobListTime": 1648618140,
+              "owner": "urn:li:seat:262400656",
+              "state": "ACTIVE",
+              "type": "RECRUITER"
+            },
+            "entity": "urn:li:hiringProject:-1",
+            "hostedOtherInfo": {},
+            "score": 1648618140000,
+            "scoreMap": {
+              "CREATED_TIME_BASED_SORT_FEATURE": 1648618140000
+            },
+            "staticRank": 0,
+            "stringUid": "2031005394151884076"
+          },
+          {
+            "docData": {
+              "capSavedSearch": [],
+              "createdTime": 1648617447000,
+              "experienceLevel": "ASSOCIATE",
+              "geoLocations": [
+                "urn:li:geo:102394087"
+              ],
+              "hiringContext": "urn:li:contract:25474301",
+              "jobBingGeoIds": [
+                101318387,
+                104653787,
+                103644278,
+                90000056,
+                102394087
+              ],
+              "lastModifiedTime": 1659051608888,
+              "name": "Clinical Systems Analyst 2, Resolute Hospital Billing - UHealth IT",
+              "originalJobListTime": 1656891601,
+              "owner": "urn:li:seat:241765223",
+              "state": "ACTIVE",
+              "type": "WRAPPABLE_JOB_POSTING"
+            },
+            "entity": "urn:li:hiringProject:-1",
+            "hostedOtherInfo": {},
+            "score": 1648617447000,
+            "scoreMap": {
+              "CREATED_TIME_BASED_SORT_FEATURE": 1648617447000
+            },
+            "staticRank": 0,
+            "stringUid": "1856792815597574874"
+          },
+          {
+            "docData": {
+              "capSavedSearch": [],
+              "createdTime": 1648617432000,
+              "experienceLevel": "ASSOCIATE",
+              "geoLocations": [
+                "urn:li:geo:102394087"
+              ],
+              "hiringContext": "urn:li:contract:25474301",
+              "jobBingGeoIds": [
+                90000056,
+                104653787,
+                101318387,
+                103644278,
+                102394087
+              ],
+              "jobPosterMemberId": 360280777,
+              "lastAccessTime": 1651171734,
+              "lastModifiedTime": 1650939181890,
+              "name": "Clinical Systems Analyst 2, Resolute Physician Billing - UHealth IT",
+              "originalJobListTime": 1648617432,
+              "owner": "urn:li:seat:262400656",
+              "state": "ACTIVE",
+              "type": "RECRUITER"
+            },
+            "entity": "urn:li:hiringProject:-1",
+            "hostedOtherInfo": {},
+            "score": 1648617432000,
+            "scoreMap": {
+              "CREATED_TIME_BASED_SORT_FEATURE": 1648617432000
+            },
+            "staticRank": 0,
+            "stringUid": "747130795829609194"
+          }
+        ],
+        "facets": [
+          {
+            "name": "state",
+            "values": [
+              {
+                "count": 5,
+                "value": "ACTIVE"
+              },
+              {
+                "count": 1,
+                "value": "CLOSED"
+              }
+            ]
+          }
+        ],
+        "metadata": {
+          "segments": [
+            {
+              "name": "pageKey",
+              "value": "NO_PAGE_KEY"
+            }
+          ]
+        },
+        "serviceMetrics": {
+          "bslIndexLagMs": 0,
+          "degradationFraction": 0,
+          "sumSearcherThreadTimeMs": 1175,
+          "sumSearcherWallTimeMs": 4270
+        },
+        "totalCount": 5
+      },
+      "elements": [
+        {
+          "otherInfo": {},
+          "score": 1648618328000,
+          "uid": "3826076797379797204",
+          "viewFields": {
+            "capSavedSearch": [],
+            "createdTime": 1648618328000,
+            "experienceLevel": "ASSOCIATE",
+            "geoLocations": [
+              "urn:li:geo:102394087"
+            ],
+            "hiringContext": "urn:li:contract:25474301",
+            "jobBingGeoIds": [
+              101318387,
+              104653787,
+              103644278,
+              90000056,
+              102394087
+            ],
+            "jobPosterMemberId": 360280777,
+            "lastAccessTime": 1661296019,
+            "lastModifiedTime": 1648618402609,
+            "name": "Clinical Systems Analyst 2 (Resolute Physician Billing)",
+            "originalJobListTime": 1648618328,
+            "owner": "urn:li:seat:262400656",
+            "state": "ACTIVE",
+            "type": "RECRUITER"
+          }
+        },
+        {
+          "otherInfo": {},
+          "score": 1648618140000,
+          "uid": "2031005394151884076",
+          "viewFields": {
+            "capSavedSearch": [],
+            "createdTime": 1648618140000,
+            "experienceLevel": "DIRECTOR",
+            "geoLocations": [
+              "urn:li:geo:102394087"
+            ],
+            "hiringContext": "urn:li:contract:25474301",
+            "jobBingGeoIds": [
+              90000056,
+              104653787,
+              101318387,
+              103644278,
+              102394087
+            ],
+            "jobPosterMemberId": 360280777,
+            "lastAccessTime": 1654535009,
+            "lastModifiedTime": 1652709511510,
+            "name": "Director IT, Resolute Billing",
+            "originalJobListTime": 1648618140,
+            "owner": "urn:li:seat:262400656",
+            "state": "ACTIVE",
+            "type": "RECRUITER"
+          }
+        },
+        {
+          "otherInfo": {},
+          "score": 1648617447000,
+          "uid": "1856792815597574874",
+          "viewFields": {
+            "capSavedSearch": [],
+            "createdTime": 1648617447000,
+            "experienceLevel": "ASSOCIATE",
+            "geoLocations": [
+              "urn:li:geo:102394087"
+            ],
+            "hiringContext": "urn:li:contract:25474301",
+            "jobBingGeoIds": [
+              101318387,
+              104653787,
+              103644278,
+              90000056,
+              102394087
+            ],
+            "lastModifiedTime": 1659051608888,
+            "name": "Clinical Systems Analyst 2, Resolute Hospital Billing - UHealth IT",
+            "originalJobListTime": 1656891601,
+            "owner": "urn:li:seat:241765223",
+            "state": "ACTIVE",
+            "type": "WRAPPABLE_JOB_POSTING"
+          }
+        },
+        {
+          "otherInfo": {},
+          "score": 1648617432000,
+          "uid": "747130795829609194",
+          "viewFields": {
+            "capSavedSearch": [],
+            "createdTime": 1648617432000,
+            "experienceLevel": "ASSOCIATE",
+            "geoLocations": [
+              "urn:li:geo:102394087"
+            ],
+            "hiringContext": "urn:li:contract:25474301",
+            "jobBingGeoIds": [
+              90000056,
+              104653787,
+              101318387,
+              103644278,
+              102394087
+            ],
+            "jobPosterMemberId": 360280777,
+            "lastAccessTime": 1651171734,
+            "lastModifiedTime": 1650939181890,
+            "name": "Clinical Systems Analyst 2, Resolute Physician Billing - UHealth IT",
+            "originalJobListTime": 1648617432,
+            "owner": "urn:li:seat:262400656",
+            "state": "ACTIVE",
+            "type": "RECRUITER"
+          }
+        }
+      ],
+      "facetResponses": [
+        {
+          "name": "state",
+          "values": [
+            {
+              "count": 5,
+              "value": "ACTIVE"
+            },
+            {
+              "count": 1,
+              "value": "CLOSED"
+            }
+          ]
+        }
+      ],
+      "total": 5
+    },
+    "success": true,
+    "timestamp": 1661296489592
+  },
+  "key": "[hiringproject_index1, 6ccee109-f948-4c36-8786-0b140e3a4a8e, urn:li:fabric:prod-lor1]",
+  "latencyDiff": -1444.091925,
+  "request": {
+    "countTotal": true,
+    "facetRequests": [
+      {
+        "countEnabled": true,
+        "maxValues": 10,
+        "name": "state",
+        "values": [
+          {
+            "selected": true,
+            "value": "ACTIVE"
+          }
+        ]
+      }
+    ],
+    "pagingContext": {
+      "count": 4,
+      "start": 0
+    },
+    "query": "+(?(+hiringContext:{urn:li:contract:25474301} +(?viewableBy:{urn:li:seat:263764506})) ?(+hiringContext:{urn:li:contract:25474301} +visibility:{HIRING_CONTEXT})) +(?(?prefixName:{resol} ?tokenName:{resol}) ?(?prefixJobTitle:{resol} ?tokenJobTitle:{resol}))",
+    "queryContext": {
+      "numToCount": 10000,
+      "numToDiscover": 50000,
+      "numToScore": 500
+    },
+    "tenantContext": {
+      "originalBrokerRequest": {
+        "memberContext": {
+          "member": "urn:li:member:194949132"
+        },
+        "metadata": {
+          "segments": [
+            {
+              "name": "pageKey",
+              "value": "d_talent_recruiter_search"
+            },
+            {
+              "enableInGraphTracking": true,
+              "name": "searchOrigin",
+              "value": "API"
+            }
+          ]
+        },
+        "other": {
+          "SORT_BY": "CREATED_TIME",
+          "SORT_ORDER": "DESCENDING",
+          "hostedSearchTenantIndexName": "hiringproject_index1",
+          "paginateInBroker": "true",
+          "trackingEnabled": "true"
+        },
+        "paginationContext": {
+          "numToReturn": 4,
+          "startFilter": 0
+        },
+        "queryContext": {
+          "facetRequests": [
+            {
+              "countEnabled": true,
+              "name": "total",
+              "values": []
+            },
+            {
+              "countEnabled": true,
+              "name": "state",
+              "values": [
+                {
+                  "selected": true,
+                  "value": "ACTIVE"
+                }
+              ]
+            }
+          ],
+          "mergerDocDataSet": "fieldSort",
+          "numToCount": 10000,
+          "numToDiscover": 50000,
+          "numToScore": 500,
+          "rawQuery": "Resol",
+          "rewrittenQuery": "+(?(+hiringContext:{urn:li:contract:25474301} +(?viewableBy:{urn:li:seat:263764506})) ?(+hiringContext:{urn:li:contract:25474301} +visibility:{HIRING_CONTEXT})) +(?(?prefixName:{resol} ?tokenName:{resol}) ?(?prefixJobTitle:{resol} ?tokenJobTitle:{resol}))",
+          "searchOrigin": "API",
+          "searchTime": 1661296457567,
+          "searchType": "INSTANT"
+        },
+        "searchContext": {
+          "experiments": {
+            "mcm.hiringproject.search.hiregroup.enabled": "enabled"
+          }
+        },
+        "verticalContext": {
+          "hiringproject": {
+            "contract": "urn:li:contract:25474301",
+            "seat": "urn:li:seat:263764506",
+            "viewerParams": [
+              {
+                "contract": "urn:li:contract:25474301",
+                "enforcement": "SHOULD",
+                "hireGroups": [],
+                "hiringProjectViewVisibility": "VIEWER_HAS_ROLES_IN",
+                "viewer": "urn:li:seat:263764506"
+              },
+              {
+                "contract": "urn:li:contract:25474301",
+                "enforcement": "SHOULD",
+                "hiringProjectViewVisibility": "PUBLIC",
+                "viewer": "urn:li:seat:263764506"
+              }
+            ]
+          }
+        }
+      },
+      "sortOption": {
+        "sortByType": "CREATED_TIME",
+        "sortOrder": "DESCENDING"
+      },
+      "viewerContext": {
+        "member": "urn:li:member:194949132",
+        "seat": "urn:li:seat:263764506"
+      }
+    }
+  },
+  "requestId": "0c201481-d0b2-4736-a9a9-e25ce07d3c59",
+  "similarity": {
+    "dataSimilarity": 1,
+    "facetSimilarity": 1,
+    "hybridDataSimilarity": 0.8705357142857143,
+    "orderSimilarity": 1,
+    "totalCountSimilarity": 1
+  },
+  "sourceBrokerRequest": {},
+  "sourceResponse": {
+    "calltimeInMillis": 8.617666,
+    "cluster": "admindebug",
+    "response": {
+      "brokerResponse": {
+        "elements": [
+          {
+            "backfillPriority": 0,
+            "docData": {
+              "capSavedSearch": [],
+              "createdTime": 1648618328000,
+              "experienceLevel": "ASSOCIATE",
+              "geoLocations": [
+                "urn:li:geo:102394087"
+              ],
+              "hiringContext": "urn:li:contract:25474301",
+              "id": 669235338,
+              "jobBingGeoIds": [
+                101318387,
+                104653787,
+                103644278,
+                90000056,
+                102394087
+              ],
+              "jobFunctions": [],
+              "jobPosterMemberId": 360280777,
+              "lastAccessTime": 1661296019,
+              "lastModifiedTime": 1648618402609,
+              "name": "Clinical Systems Analyst 2 (Resolute Physician Billing)",
+              "originalJobListTime": 1648618328,
+              "owner": "urn:li:seat:262400656",
+              "state": "ACTIVE",
+              "type": "RECRUITER"
+            },
+            "entity": "urn:li:hiringProject:3826076797379797204",
+            "hostedOtherInfo": {},
+            "score": 1648618328000,
+            "scoreMap": {
+              "CREATED_TIME_BASED_SORT_FEATURE": 1648618328000
+            },
+            "staticRank": 0
+          },
+          {
+            "backfillPriority": 0,
+            "docData": {
+              "capSavedSearch": [],
+              "createdTime": 1648618140000,
+              "experienceLevel": "DIRECTOR",
+              "geoLocations": [
+                "urn:li:geo:102394087"
+              ],
+              "hiringContext": "urn:li:contract:25474301",
+              "id": 669234154,
+              "jobBingGeoIds": [
+                101318387,
+                104653787,
+                103644278,
+                90000056,
+                102394087
+              ],
+              "jobFunctions": [],
+              "jobPosterMemberId": 360280777,
+              "lastAccessTime": 1654535009,
+              "lastModifiedTime": 1652709511510,
+              "name": "Director IT, Resolute Billing",
+              "originalJobListTime": 1648618140,
+              "owner": "urn:li:seat:262400656",
+              "state": "ACTIVE",
+              "type": "RECRUITER"
+            },
+            "entity": "urn:li:hiringProject:2031005394151884076",
+            "hostedOtherInfo": {},
+            "score": 1648618140000,
+            "scoreMap": {
+              "CREATED_TIME_BASED_SORT_FEATURE": 1648618140000
+            },
+            "staticRank": 0
+          },
+          {
+            "backfillPriority": 0,
+            "docData": {
+              "capSavedSearch": [],
+              "createdTime": 1648617447000,
+              "experienceLevel": "ASSOCIATE",
+              "geoLocations": [
+                "urn:li:geo:102394087"
+              ],
+              "hiringContext": "urn:li:contract:25474301",
+              "id": 684680858,
+              "jobBingGeoIds": [
+                101318387,
+                104653787,
+                103644278,
+                90000056,
+                102394087
+              ],
+              "jobFunctions": [],
+              "lastModifiedTime": 1659051608888,
+              "name": "Clinical Systems Analyst 2, Resolute Hospital Billing - UHealth IT",
+              "originalJobListTime": 1656891601,
+              "owner": "urn:li:seat:241765223",
+              "state": "ACTIVE",
+              "type": "WRAPPABLE_JOB_POSTING"
+            },
+            "entity": "urn:li:hiringProject:1856792815597574874",
+            "hostedOtherInfo": {},
+            "score": 1648617447000,
+            "scoreMap": {
+              "CREATED_TIME_BASED_SORT_FEATURE": 1648617447000
+            },
+            "staticRank": 0
+          },
+          {
+            "backfillPriority": 0,
+            "docData": {
+              "capSavedSearch": [],
+              "createdTime": 1648617432000,
+              "experienceLevel": "ASSOCIATE",
+              "geoLocations": [
+                "urn:li:geo:102394087"
+              ],
+              "hiringContext": "urn:li:contract:25474301",
+              "id": 684312234,
+              "jobBingGeoIds": [
+                101318387,
+                104653787,
+                103644278,
+                90000056,
+                102394087
+              ],
+              "jobFunctions": [],
+              "jobPosterMemberId": 360280777,
+              "lastAccessTime": 1651171734,
+              "lastModifiedTime": 1650939181890,
+              "name": "Clinical Systems Analyst 2, Resolute Physician Billing - UHealth IT",
+              "originalJobListTime": 1648617432,
+              "owner": "urn:li:seat:262400656",
+              "state": "ACTIVE",
+              "type": "RECRUITER"
+            },
+            "entity": "urn:li:hiringProject:747130795829609194",
+            "hostedOtherInfo": {},
+            "score": 1648617432000,
+            "scoreMap": {
+              "CREATED_TIME_BASED_SORT_FEATURE": 1648617432000
+            },
+            "staticRank": 0
+          }
+        ],
+        "facets": [
+          {
+            "name": "total",
+            "values": [
+              {
+                "count": 5,
+                "value": "totalValue"
+              }
+            ]
+          },
+          {
+            "name": "state",
+            "values": [
+              {
+                "count": 5,
+                "value": "ACTIVE"
+              },
+              {
+                "count": 1,
+                "value": "CLOSED"
+              }
+            ]
+          }
+        ],
+        "metadata": {
+          "segments": [
+            {
+              "name": "pageKey",
+              "value": "d_talent_recruiter_search"
+            },
+            {
+              "enableInGraphTracking": true,
+              "name": "searchOrigin",
+              "value": "API"
+            }
+          ]
+        },
+        "serviceMetrics": {
+          "bslIndexLagMs": 0,
+          "degradationFraction": 0,
+          "sumSearcherThreadTimeMs": 27,
+          "sumSearcherWallTimeMs": 76
+        },
+        "trackingRecord": {
+          "brokerSummary": [
+            {
+              "numFailedPartitions": 0,
+              "numPartitions": 8,
+              "numSuccessfulPartitions": 8,
+              "numTimedOutPartitions": 0,
+              "queryType": "Search candidates with main query"
+            },
+            {
+              "numFailedPartitions": 0,
+              "numPartitions": 8,
+              "numSuccessfulPartitions": 8,
+              "numTimedOutPartitions": 0,
+              "queryType": "Facet Count"
+            },
+            {
+              "numFailedPartitions": 0,
+              "numPartitions": 2,
+              "numSuccessfulPartitions": 2,
+              "numTimedOutPartitions": 0,
+              "queryType": "Retrieve Document Data"
+            }
+          ],
+          "nodeTrackingRecords": [
+            {
+              "hostName": "ltx1-app34085.prod.linkedin.com",
+              "partition": 0,
+              "queryProfile": {
+                "elapsedNanos": 0,
+                "matcher": "BooleanMatcher",
+                "numCacheHits": 0,
+                "numCollected": 0,
+                "numJoined": 0,
+                "numJoinedDocs": 0,
+                "numMatched": 0,
+                "numRetrieved": 0,
+                "subQueries": [
+                  {},
+                  {}
+                ]
+              },
+              "queryType": "search_phase_candidates",
+              "serviceName": "ltx1-app34085-seas-hiringproject-searcher-i000",
+              "tags": {
+                "reason": "SAMPLED"
+              },
+              "timeline": {
+                "epoch": 1661296457572,
+                "events": [
+                  {
+                    "event": "searcher_begin",
+                    "timestamp": 0
+                  },
+                  {
+                    "event": "searcher.startup_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 1
+                  },
+                  {
+                    "event": "searcher.matching_value",
+                    "intValues": [
+                      1
+                    ],
+                    "timestamp": 1
+                  },
+                  {
+                    "event": "searcher.scoring_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 1
+                  },
+                  {
+                    "event": "searcher.finishup_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 1
+                  },
+                  {
+                    "event": "searcher.completion_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 1
+                  },
+                  {
+                    "event": "searcher_done",
+                    "timestamp": 1
+                  }
+                ]
+              }
+            },
+            {
+              "hostName": "ltx1-app34085.prod.linkedin.com",
+              "partition": 1,
+              "queryProfile": {
+                "elapsedNanos": 0,
+                "matcher": "BooleanMatcher",
+                "numCacheHits": 0,
+                "numCollected": 0,
+                "numJoined": 0,
+                "numJoinedDocs": 0,
+                "numMatched": 0,
+                "numRetrieved": 0,
+                "subQueries": [
+                  {},
+                  {}
+                ]
+              },
+              "queryType": "search_phase_candidates",
+              "serviceName": "ltx1-app34085-seas-hiringproject-searcher-i001",
+              "tags": {
+                "reason": "SAMPLED"
+              },
+              "timeline": {
+                "epoch": 1661296457572,
+                "events": [
+                  {
+                    "event": "searcher_begin",
+                    "timestamp": 0
+                  },
+                  {
+                    "event": "searcher.startup_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 1
+                  },
+                  {
+                    "event": "searcher.matching_value",
+                    "intValues": [
+                      1
+                    ],
+                    "timestamp": 1
+                  },
+                  {
+                    "event": "searcher.scoring_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 1
+                  },
+                  {
+                    "event": "searcher.finishup_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 1
+                  },
+                  {
+                    "event": "searcher.completion_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 1
+                  },
+                  {
+                    "event": "searcher_done",
+                    "timestamp": 2
+                  }
+                ]
+              }
+            },
+            {
+              "hostName": "ltx1-app83008.prod.linkedin.com",
+              "partition": 4,
+              "queryProfile": {
+                "elapsedNanos": 0,
+                "matcher": "BooleanMatcher",
+                "numCacheHits": 0,
+                "numCollected": 2,
+                "numJoined": 0,
+                "numJoinedDocs": 0,
+                "numMatched": 2,
+                "numRetrieved": 2,
+                "subQueries": [
+                  {},
+                  {}
+                ]
+              },
+              "queryType": "search_phase_candidates",
+              "serviceName": "ltx1-app83008-seas-hiringproject-searcher-i004",
+              "tags": {
+                "reason": "SAMPLED"
+              },
+              "timeline": {
+                "epoch": 1661296457573,
+                "events": [
+                  {
+                    "event": "searcher_begin",
+                    "timestamp": 0
+                  },
+                  {
+                    "event": "searcher.startup_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 1
+                  },
+                  {
+                    "event": "searcher.matching_value",
+                    "intValues": [
+                      1
+                    ],
+                    "timestamp": 1
+                  },
+                  {
+                    "event": "searcher.scoring_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 1
+                  },
+                  {
+                    "event": "searcher.finishup_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 1
+                  },
+                  {
+                    "event": "searcher.completion_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 1
+                  },
+                  {
+                    "event": "searcher_done",
+                    "timestamp": 1
+                  }
+                ]
+              }
+            },
+            {
+              "hostName": "ltx1-app26239.prod.linkedin.com",
+              "partition": 6,
+              "queryProfile": {
+                "elapsedNanos": 0,
+                "matcher": "BooleanMatcher",
+                "numCacheHits": 0,
+                "numCollected": 0,
+                "numJoined": 0,
+                "numJoinedDocs": 0,
+                "numMatched": 0,
+                "numRetrieved": 0,
+                "subQueries": [
+                  {},
+                  {}
+                ]
+              },
+              "queryType": "search_phase_candidates",
+              "serviceName": "ltx1-app26239-seas-hiringproject-searcher-i006",
+              "tags": {
+                "reason": "SAMPLED"
+              },
+              "timeline": {
+                "epoch": 1661296457573,
+                "events": [
+                  {
+                    "event": "searcher_begin",
+                    "timestamp": 0
+                  },
+                  {
+                    "event": "searcher.startup_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 2
+                  },
+                  {
+                    "event": "searcher.matching_value",
+                    "intValues": [
+                      2
+                    ],
+                    "timestamp": 2
+                  },
+                  {
+                    "event": "searcher.scoring_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 2
+                  },
+                  {
+                    "event": "searcher.finishup_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 2
+                  },
+                  {
+                    "event": "searcher.completion_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 2
+                  },
+                  {
+                    "event": "searcher_done",
+                    "timestamp": 2
+                  }
+                ]
+              }
+            },
+            {
+              "hostName": "ltx1-app35373.prod.linkedin.com",
+              "partition": 2,
+              "queryProfile": {
+                "elapsedNanos": 0,
+                "matcher": "BooleanMatcher",
+                "numCacheHits": 0,
+                "numCollected": 2,
+                "numJoined": 0,
+                "numJoinedDocs": 0,
+                "numMatched": 2,
+                "numRetrieved": 2,
+                "subQueries": [
+                  {},
+                  {}
+                ]
+              },
+              "queryType": "search_phase_candidates",
+              "serviceName": "ltx1-app35373-seas-hiringproject-searcher-i002",
+              "tags": {
+                "reason": "SAMPLED"
+              },
+              "timeline": {
+                "epoch": 1661296457572,
+                "events": [
+                  {
+                    "event": "searcher_begin",
+                    "timestamp": 0
+                  },
+                  {
+                    "event": "searcher.startup_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 2
+                  },
+                  {
+                    "event": "searcher.matching_value",
+                    "intValues": [
+                      2
+                    ],
+                    "timestamp": 2
+                  },
+                  {
+                    "event": "searcher.scoring_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 2
+                  },
+                  {
+                    "event": "searcher.finishup_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 2
+                  },
+                  {
+                    "event": "searcher.completion_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 2
+                  },
+                  {
+                    "event": "searcher_done",
+                    "timestamp": 2
+                  }
+                ]
+              }
+            },
+            {
+              "hostName": "ltx1-app35129.prod.linkedin.com",
+              "partition": 7,
+              "queryProfile": {
+                "elapsedNanos": 0,
+                "matcher": "BooleanMatcher",
+                "numCacheHits": 0,
+                "numCollected": 0,
+                "numJoined": 0,
+                "numJoinedDocs": 0,
+                "numMatched": 0,
+                "numRetrieved": 0,
+                "subQueries": [
+                  {},
+                  {}
+                ]
+              },
+              "queryType": "search_phase_candidates",
+              "serviceName": "ltx1-app35129-seas-hiringproject-searcher-i007",
+              "tags": {
+                "reason": "SAMPLED"
+              },
+              "timeline": {
+                "epoch": 1661296457573,
+                "events": [
+                  {
+                    "event": "searcher_begin",
+                    "timestamp": 0
+                  },
+                  {
+                    "event": "searcher.startup_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 2
+                  },
+                  {
+                    "event": "searcher.matching_value",
+                    "intValues": [
+                      1
+                    ],
+                    "timestamp": 2
+                  },
+                  {
+                    "event": "searcher.scoring_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 2
+                  },
+                  {
+                    "event": "searcher.finishup_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 2
+                  },
+                  {
+                    "event": "searcher.completion_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 2
+                  },
+                  {
+                    "event": "searcher_done",
+                    "timestamp": 2
+                  }
+                ]
+              }
+            },
+            {
+              "hostName": "ltx1-app34857.prod.linkedin.com",
+              "partition": 5,
+              "queryProfile": {
+                "elapsedNanos": 0,
+                "matcher": "BooleanMatcher",
+                "numCacheHits": 0,
+                "numCollected": 1,
+                "numJoined": 0,
+                "numJoinedDocs": 0,
+                "numMatched": 1,
+                "numRetrieved": 1,
+                "subQueries": [
+                  {},
+                  {}
+                ]
+              },
+              "queryType": "search_phase_candidates",
+              "serviceName": "ltx1-app34857-seas-hiringproject-searcher-i005",
+              "tags": {
+                "reason": "SAMPLED"
+              },
+              "timeline": {
+                "epoch": 1661296457572,
+                "events": [
+                  {
+                    "event": "searcher_begin",
+                    "timestamp": 0
+                  },
+                  {
+                    "event": "searcher.startup_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 2
+                  },
+                  {
+                    "event": "searcher.matching_value",
+                    "intValues": [
+                      2
+                    ],
+                    "timestamp": 2
+                  },
+                  {
+                    "event": "searcher.scoring_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 2
+                  },
+                  {
+                    "event": "searcher.finishup_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 2
+                  },
+                  {
+                    "event": "searcher.completion_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 2
+                  },
+                  {
+                    "event": "searcher_done",
+                    "timestamp": 2
+                  }
+                ]
+              }
+            },
+            {
+              "hostName": "ltx1-app83008.prod.linkedin.com",
+              "partition": 3,
+              "queryProfile": {
+                "elapsedNanos": 0,
+                "matcher": "BooleanMatcher",
+                "numCacheHits": 0,
+                "numCollected": 0,
+                "numJoined": 0,
+                "numJoinedDocs": 0,
+                "numMatched": 0,
+                "numRetrieved": 0,
+                "subQueries": [
+                  {},
+                  {}
+                ]
+              },
+              "queryType": "search_phase_candidates",
+              "serviceName": "ltx1-app83008-seas-hiringproject-searcher-i003",
+              "tags": {
+                "reason": "SAMPLED"
+              },
+              "timeline": {
+                "epoch": 1661296457573,
+                "events": [
+                  {
+                    "event": "searcher_begin",
+                    "timestamp": 0
+                  },
+                  {
+                    "event": "searcher.startup_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 2
+                  },
+                  {
+                    "event": "searcher.matching_value",
+                    "intValues": [
+                      2
+                    ],
+                    "timestamp": 2
+                  },
+                  {
+                    "event": "searcher.scoring_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 2
+                  },
+                  {
+                    "event": "searcher.finishup_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 2
+                  },
+                  {
+                    "event": "searcher.completion_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 2
+                  },
+                  {
+                    "event": "searcher_done",
+                    "timestamp": 2
+                  }
+                ]
+              }
+            },
+            {
+              "hostName": "ltx1-app4913.prod.linkedin.com",
+              "partition": 2,
+              "queryProfile": {
+                "elapsedNanos": 0,
+                "matcher": "FacetsMatcher",
+                "numCacheHits": 0,
+                "numCollected": 2,
+                "numJoined": 0,
+                "numJoinedDocs": 0,
+                "numMatched": 2,
+                "numRetrieved": 2,
+                "subQueries": [
+                  {},
+                  {},
+                  {}
+                ]
+              },
+              "queryType": "facet_count",
+              "serviceName": "ltx1-app4913-seas-hiringproject-searcher-i002",
+              "tags": {
+                "reason": "SAMPLED"
+              },
+              "timeline": {
+                "epoch": 1661296457574,
+                "events": [
+                  {
+                    "event": "searcher_begin",
+                    "timestamp": 0
+                  },
+                  {
+                    "event": "searcher.startup_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 1
+                  },
+                  {
+                    "event": "searcher.matching_value",
+                    "intValues": [
+                      1
+                    ],
+                    "timestamp": 1
+                  },
+                  {
+                    "event": "searcher.scoring_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 1
+                  },
+                  {
+                    "event": "searcher.finishup_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 1
+                  },
+                  {
+                    "event": "searcher.completion_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 1
+                  },
+                  {
+                    "event": "searcher_done",
+                    "timestamp": 1
+                  }
+                ]
+              }
+            },
+            {
+              "hostName": "ltx1-app30790.prod.linkedin.com",
+              "partition": 3,
+              "queryProfile": {
+                "elapsedNanos": 0,
+                "matcher": "FacetsMatcher",
+                "numCacheHits": 0,
+                "numCollected": 0,
+                "numJoined": 0,
+                "numJoinedDocs": 0,
+                "numMatched": 0,
+                "numRetrieved": 0,
+                "subQueries": [
+                  {},
+                  {},
+                  {}
+                ]
+              },
+              "queryType": "facet_count",
+              "serviceName": "ltx1-app30790-seas-hiringproject-searcher-i003",
+              "tags": {
+                "reason": "SAMPLED"
+              },
+              "timeline": {
+                "epoch": 1661296457574,
+                "events": [
+                  {
+                    "event": "searcher_begin",
+                    "timestamp": 0
+                  },
+                  {
+                    "event": "searcher.startup_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 2
+                  },
+                  {
+                    "event": "searcher.matching_value",
+                    "intValues": [
+                      2
+                    ],
+                    "timestamp": 2
+                  },
+                  {
+                    "event": "searcher.scoring_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 2
+                  },
+                  {
+                    "event": "searcher.finishup_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 2
+                  },
+                  {
+                    "event": "searcher.completion_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 2
+                  },
+                  {
+                    "event": "searcher_done",
+                    "timestamp": 2
+                  }
+                ]
+              }
+            },
+            {
+              "hostName": "ltx1-app34857.prod.linkedin.com",
+              "partition": 5,
+              "queryProfile": {
+                "elapsedNanos": 0,
+                "matcher": "FacetsMatcher",
+                "numCacheHits": 0,
+                "numCollected": 2,
+                "numJoined": 0,
+                "numJoinedDocs": 0,
+                "numMatched": 2,
+                "numRetrieved": 2,
+                "subQueries": [
+                  {},
+                  {},
+                  {}
+                ]
+              },
+              "queryType": "facet_count",
+              "serviceName": "ltx1-app34857-seas-hiringproject-searcher-i005",
+              "tags": {
+                "reason": "SAMPLED"
+              },
+              "timeline": {
+                "epoch": 1661296457574,
+                "events": [
+                  {
+                    "event": "searcher_begin",
+                    "timestamp": 0
+                  },
+                  {
+                    "event": "searcher.startup_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 1
+                  },
+                  {
+                    "event": "searcher.matching_value",
+                    "intValues": [
+                      1
+                    ],
+                    "timestamp": 1
+                  },
+                  {
+                    "event": "searcher.scoring_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 1
+                  },
+                  {
+                    "event": "searcher.finishup_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 1
+                  },
+                  {
+                    "event": "searcher.completion_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 1
+                  },
+                  {
+                    "event": "searcher_done",
+                    "timestamp": 1
+                  }
+                ]
+              }
+            },
+            {
+              "hostName": "ltx1-app35128.prod.linkedin.com",
+              "partition": 0,
+              "queryProfile": {
+                "elapsedNanos": 0,
+                "matcher": "FacetsMatcher",
+                "numCacheHits": 0,
+                "numCollected": 0,
+                "numJoined": 0,
+                "numJoinedDocs": 0,
+                "numMatched": 0,
+                "numRetrieved": 0,
+                "subQueries": [
+                  {},
+                  {},
+                  {}
+                ]
+              },
+              "queryType": "facet_count",
+              "serviceName": "ltx1-app35128-seas-hiringproject-searcher-i000",
+              "tags": {
+                "reason": "SAMPLED"
+              },
+              "timeline": {
+                "epoch": 1661296457573,
+                "events": [
+                  {
+                    "event": "searcher_begin",
+                    "timestamp": 0
+                  },
+                  {
+                    "event": "searcher.startup_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 2
+                  },
+                  {
+                    "event": "searcher.matching_value",
+                    "intValues": [
+                      2
+                    ],
+                    "timestamp": 2
+                  },
+                  {
+                    "event": "searcher.scoring_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 2
+                  },
+                  {
+                    "event": "searcher.finishup_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 2
+                  },
+                  {
+                    "event": "searcher.completion_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 2
+                  },
+                  {
+                    "event": "searcher_done",
+                    "timestamp": 2
+                  }
+                ]
+              }
+            },
+            {
+              "hostName": "ltx1-app31110.prod.linkedin.com",
+              "partition": 7,
+              "queryProfile": {
+                "elapsedNanos": 0,
+                "matcher": "FacetsMatcher",
+                "numCacheHits": 0,
+                "numCollected": 0,
+                "numJoined": 0,
+                "numJoinedDocs": 0,
+                "numMatched": 0,
+                "numRetrieved": 0,
+                "subQueries": [
+                  {},
+                  {},
+                  {}
+                ]
+              },
+              "queryType": "facet_count",
+              "serviceName": "ltx1-app31110-seas-hiringproject-searcher-i007",
+              "tags": {
+                "reason": "SAMPLED"
+              },
+              "timeline": {
+                "epoch": 1661296457574,
+                "events": [
+                  {
+                    "event": "searcher_begin",
+                    "timestamp": 0
+                  },
+                  {
+                    "event": "searcher.startup_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 1
+                  },
+                  {
+                    "event": "searcher.matching_value",
+                    "intValues": [
+                      1
+                    ],
+                    "timestamp": 1
+                  },
+                  {
+                    "event": "searcher.scoring_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 1
+                  },
+                  {
+                    "event": "searcher.finishup_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 1
+                  },
+                  {
+                    "event": "searcher.completion_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 1
+                  },
+                  {
+                    "event": "searcher_done",
+                    "timestamp": 1
+                  }
+                ]
+              }
+            },
+            {
+              "hostName": "ltx1-app36137.prod.linkedin.com",
+              "partition": 4,
+              "queryProfile": {
+                "elapsedNanos": 0,
+                "matcher": "FacetsMatcher",
+                "numCacheHits": 0,
+                "numCollected": 2,
+                "numJoined": 0,
+                "numJoinedDocs": 0,
+                "numMatched": 2,
+                "numRetrieved": 2,
+                "subQueries": [
+                  {},
+                  {},
+                  {}
+                ]
+              },
+              "queryType": "facet_count",
+              "serviceName": "ltx1-app36137-seas-hiringproject-searcher-i004",
+              "tags": {
+                "reason": "SAMPLED"
+              },
+              "timeline": {
+                "epoch": 1661296457574,
+                "events": [
+                  {
+                    "event": "searcher_begin",
+                    "timestamp": 0
+                  },
+                  {
+                    "event": "searcher.startup_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 2
+                  },
+                  {
+                    "event": "searcher.matching_value",
+                    "intValues": [
+                      1
+                    ],
+                    "timestamp": 2
+                  },
+                  {
+                    "event": "searcher.scoring_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 2
+                  },
+                  {
+                    "event": "searcher.finishup_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 2
+                  },
+                  {
+                    "event": "searcher.completion_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 2
+                  },
+                  {
+                    "event": "searcher_done",
+                    "timestamp": 2
+                  }
+                ]
+              }
+            },
+            {
+              "hostName": "ltx1-app83308.prod.linkedin.com",
+              "partition": 1,
+              "queryProfile": {
+                "elapsedNanos": 0,
+                "matcher": "FacetsMatcher",
+                "numCacheHits": 0,
+                "numCollected": 0,
+                "numJoined": 0,
+                "numJoinedDocs": 0,
+                "numMatched": 0,
+                "numRetrieved": 0,
+                "subQueries": [
+                  {},
+                  {},
+                  {}
+                ]
+              },
+              "queryType": "facet_count",
+              "serviceName": "ltx1-app83308-seas-hiringproject-searcher-i001",
+              "tags": {
+                "reason": "SAMPLED"
+              },
+              "timeline": {
+                "epoch": 1661296457574,
+                "events": [
+                  {
+                    "event": "searcher_begin",
+                    "timestamp": 0
+                  },
+                  {
+                    "event": "searcher.startup_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 2
+                  },
+                  {
+                    "event": "searcher.matching_value",
+                    "intValues": [
+                      2
+                    ],
+                    "timestamp": 2
+                  },
+                  {
+                    "event": "searcher.scoring_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 2
+                  },
+                  {
+                    "event": "searcher.finishup_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 2
+                  },
+                  {
+                    "event": "searcher.completion_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 2
+                  },
+                  {
+                    "event": "searcher_done",
+                    "timestamp": 2
+                  }
+                ]
+              }
+            },
+            {
+              "hostName": "ltx1-app35373.prod.linkedin.com",
+              "partition": 2,
+              "queryProfile": {
+                "elapsedNanos": 0,
+                "matcher": "BooleanMatcher",
+                "numCacheHits": 0,
+                "numCollected": 2,
+                "numJoined": 0,
+                "numJoinedDocs": 0,
+                "numMatched": 2,
+                "numRetrieved": 2,
+                "subQueries": [
+                  {},
+                  {},
+                  {},
+                  {}
+                ]
+              },
+              "queryType": "search_phase_docdata",
+              "serviceName": "ltx1-app35373-seas-hiringproject-searcher-i002"
+            },
+            {
+              "hostName": "ltx1-app34857.prod.linkedin.com",
+              "partition": 6,
+              "queryProfile": {
+                "elapsedNanos": 0,
+                "matcher": "FacetsMatcher",
+                "numCacheHits": 0,
+                "numCollected": 0,
+                "numJoined": 0,
+                "numJoinedDocs": 0,
+                "numMatched": 0,
+                "numRetrieved": 0,
+                "subQueries": [
+                  {},
+                  {},
+                  {}
+                ]
+              },
+              "queryType": "facet_count",
+              "serviceName": "ltx1-app34857-seas-hiringproject-searcher-i006",
+              "tags": {
+                "reason": "SAMPLED"
+              },
+              "timeline": {
+                "epoch": 1661296457575,
+                "events": [
+                  {
+                    "event": "searcher_begin",
+                    "timestamp": 0
+                  },
+                  {
+                    "event": "searcher.startup_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 2
+                  },
+                  {
+                    "event": "searcher.matching_value",
+                    "intValues": [
+                      2
+                    ],
+                    "timestamp": 2
+                  },
+                  {
+                    "event": "searcher.scoring_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 2
+                  },
+                  {
+                    "event": "searcher.finishup_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 2
+                  },
+                  {
+                    "event": "searcher.completion_value",
+                    "intValues": [
+                      0
+                    ],
+                    "timestamp": 2
+                  },
+                  {
+                    "event": "searcher_done",
+                    "timestamp": 2
+                  }
+                ]
+              }
+            },
+            {
+              "hostName": "ltx1-app36811.prod.linkedin.com",
+              "partition": 4,
+              "queryProfile": {
+                "elapsedNanos": 0,
+                "matcher": "BooleanMatcher",
+                "numCacheHits": 0,
+                "numCollected": 2,
+                "numJoined": 0,
+                "numJoinedDocs": 0,
+                "numMatched": 2,
+                "numRetrieved": 2,
+                "subQueries": [
+                  {},
+                  {},
+                  {},
+                  {}
+                ]
+              },
+              "queryType": "search_phase_docdata",
+              "serviceName": "ltx1-app36811-seas-hiringproject-searcher-i004"
+            },
+            {
+              "degraded": false,
+              "hostName": "ltx1-app57894.prod.linkedin.com",
+              "serviceName": "ltx1-app57894-seas-hiringproject-broker-i000",
+              "tags": {
+                "reason": "SAMPLED"
+              },
+              "timeline": {
+                "epoch": 1661296457569,
+                "events": [
+                  {
+                    "event": "query_begin",
+                    "timestamp": 0
+                  },
+                  {
+                    "event": "search_phase_candidates_begin",
+                    "partitions": 8,
+                    "timestamp": 2
+                  },
+                  {
+                    "event": "facet_count_begin",
+                    "partitions": 8,
+                    "timestamp": 4
+                  },
+                  {
+                    "event": "search_phase_docdata_begin",
+                    "partitions": 2,
+                    "timestamp": 6
+                  },
+                  {
+                    "event": "search_phase_candidates_done",
+                    "intValues": [
+                      4,
+                      4,
+                      4,
+                      5,
+                      5,
+                      5,
+                      5,
+                      5
+                    ],
+                    "partitions": 8,
+                    "timestamp": 6
+                  },
+                  {
+                    "event": "facet_count_done",
+                    "intValues": [
+                      4,
+                      4,
+                      4,
+                      4,
+                      5,
+                      5,
+                      5,
+                      5
+                    ],
+                    "partitions": 8,
+                    "timestamp": 8
+                  },
+                  {
+                    "event": "search_phase_docdata_done",
+                    "intValues": [
+                      1,
+                      2
+                    ],
+                    "partitions": 2,
+                    "timestamp": 8
+                  },
+                  {
+                    "event": "query_done",
+                    "timestamp": 8
+                  }
+                ]
+              }
+            }
+          ],
+          "numEarlyTerminatedPartitions": 0
+        }
+      },
+      "elements": [
+        {
+          "score": 1648618328000,
+          "uid": "3826076797379797204",
+          "viewFields": {
+            "capSavedSearch": [],
+            "createdTime": 1648618328000,
+            "experienceLevel": "ASSOCIATE",
+            "geoLocations": [
+              "urn:li:geo:102394087"
+            ],
+            "hiringContext": "urn:li:contract:25474301",
+            "id": 669235338,
+            "jobBingGeoIds": [
+              101318387,
+              104653787,
+              103644278,
+              90000056,
+              102394087
+            ],
+            "jobFunctions": [],
+            "jobPosterMemberId": 360280777,
+            "lastAccessTime": 1661296019,
+            "lastModifiedTime": 1648618402609,
+            "name": "Clinical Systems Analyst 2 (Resolute Physician Billing)",
+            "originalJobListTime": 1648618328,
+            "owner": "urn:li:seat:262400656",
+            "state": "ACTIVE",
+            "type": "RECRUITER"
+          }
+        },
+        {
+          "score": 1648618140000,
+          "uid": "2031005394151884076",
+          "viewFields": {
+            "capSavedSearch": [],
+            "createdTime": 1648618140000,
+            "experienceLevel": "DIRECTOR",
+            "geoLocations": [
+              "urn:li:geo:102394087"
+            ],
+            "hiringContext": "urn:li:contract:25474301",
+            "id": 669234154,
+            "jobBingGeoIds": [
+              101318387,
+              104653787,
+              103644278,
+              90000056,
+              102394087
+            ],
+            "jobFunctions": [],
+            "jobPosterMemberId": 360280777,
+            "lastAccessTime": 1654535009,
+            "lastModifiedTime": 1652709511510,
+            "name": "Director IT, Resolute Billing",
+            "originalJobListTime": 1648618140,
+            "owner": "urn:li:seat:262400656",
+            "state": "ACTIVE",
+            "type": "RECRUITER"
+          }
+        },
+        {
+          "score": 1648617447000,
+          "uid": "1856792815597574874",
+          "viewFields": {
+            "capSavedSearch": [],
+            "createdTime": 1648617447000,
+            "experienceLevel": "ASSOCIATE",
+            "geoLocations": [
+              "urn:li:geo:102394087"
+            ],
+            "hiringContext": "urn:li:contract:25474301",
+            "id": 684680858,
+            "jobBingGeoIds": [
+              101318387,
+              104653787,
+              103644278,
+              90000056,
+              102394087
+            ],
+            "jobFunctions": [],
+            "lastModifiedTime": 1659051608888,
+            "name": "Clinical Systems Analyst 2, Resolute Hospital Billing - UHealth IT",
+            "originalJobListTime": 1656891601,
+            "owner": "urn:li:seat:241765223",
+            "state": "ACTIVE",
+            "type": "WRAPPABLE_JOB_POSTING"
+          }
+        },
+        {
+          "score": 1648617432000,
+          "uid": "747130795829609194",
+          "viewFields": {
+            "capSavedSearch": [],
+            "createdTime": 1648617432000,
+            "experienceLevel": "ASSOCIATE",
+            "geoLocations": [
+              "urn:li:geo:102394087"
+            ],
+            "hiringContext": "urn:li:contract:25474301",
+            "id": 684312234,
+            "jobBingGeoIds": [
+              101318387,
+              104653787,
+              103644278,
+              90000056,
+              102394087
+            ],
+            "jobFunctions": [],
+            "jobPosterMemberId": 360280777,
+            "lastAccessTime": 1651171734,
+            "lastModifiedTime": 1650939181890,
+            "name": "Clinical Systems Analyst 2, Resolute Physician Billing - UHealth IT",
+            "originalJobListTime": 1648617432,
+            "owner": "urn:li:seat:262400656",
+            "state": "ACTIVE",
+            "type": "RECRUITER"
+          }
+        }
+      ],
+      "facetResponses": [
+        {
+          "name": "state",
+          "values": [
+            {
+              "count": 5,
+              "value": "ACTIVE"
+            },
+            {
+              "count": 1,
+              "value": "CLOSED"
+            }
+          ]
+        }
+      ],
+      "total": 5
+    },
+    "success": true,
+    "timestamp": 1661296488042
+  }
+}

@@ -1,0 +1,62 @@
+#!/bin/bash
+
+if [ $1 == "--proxy" ]; then
+  proxy=$2
+  shift
+  shift
+fi
+
+dataFilePath=""
+
+N=1
+
+while [[ $# -gt $N ]]; do
+  next=$((N+1))
+  nextArg=${!next}
+  case ${!N} in
+    --data|-d)
+      if [[ $nextArg == @* ]]
+      then
+        echo "Found data file path as argument $nextArg" 1>&2
+	      dataFilePath="${nextArg#?}"
+
+        remaining=$((next+1))
+        set -- "${@:1:$N}" "@rcurli_request" "${@:$remaining}"
+        N=$((N+2))
+      else
+        echo "Found data argument but not a file" 1>&2
+        N=$((N+1))
+      fi
+      ;;
+    --proxy)
+      proxy="$nextArg"
+      N=$((N+2))
+      ;;
+    *)
+      N=$((N+1))
+      ;;
+  esac
+done
+
+proxy=${proxy:-'nhs'}
+
+C=''
+for i in "$@"; do
+  C="$C "$(printf "%q\n" "$i")
+done
+
+if [ -n "$dataFilePath" ]
+then
+  scp -q $dataFilePath $proxy:~/rcurli_request > ~/temp/templog
+fi
+ssh -t $proxy <<-EOF
+	curli --dv-auth SELF $C
+EOF
+
+#cat <<-EOF
+#	curli --dv-auth SELF $C
+#EOF
+#params=$(echo ${@:1} | sed 's/"/\\"/g')
+#echo "$@"
+#curli --dv-auth SELF ${@:1}
+# -o LogLevel=error 

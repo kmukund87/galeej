@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -lA "${@:1}"
+ls -lAh "${@:1}"

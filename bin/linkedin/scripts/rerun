@@ -1,0 +1,5 @@
+#cp ../*request* .
+
+rm source.broker.response.json; rcurli --fabric prod-lor1 'd2://galene-hiringproject-main?action=search' -d @source_broker_request.json > source.broker.response.json
+rm eval.broker.response.json; rcurli --fabric prod-lor1 'https://lor1-app47549.prod.linkedin.com:6439/seas-broker/search?action=search' -d @eval_broker_request.json > eval.broker.response.json
+#rm eval.server.response.json; rcurli --fabric prod-lor1 'd2://HostedSearch-hiringproject_index1?action=search' -d @eval_server_request.json > eval.server.response.json

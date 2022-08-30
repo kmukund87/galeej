@@ -1,2 +1,0 @@
-#!/bin/bash
-grep "class" $1 | sed "s/.*class \([a-zA-Z]*\).*/\1/"

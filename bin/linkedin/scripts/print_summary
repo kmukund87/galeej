@@ -1,0 +1,22 @@
+#!/bin/bash
+
+echo "Line,UidMismatch,TotalCountMismatch,FacetMisMatch,DataSimilarity,OrderSimilarity,HybridSimilarity,FacetSimilarity"
+
+for dir in `ls -d line*`
+do
+  cd "$dir" || exit
+
+  [[ -n "$(diff source.elements.uid eval.elements.uid)" ]] && diffUid="Y" || diffUid="_"
+  [[ -n "$(diff source.totalCount eval.totalCount)" ]] && diffTotal="Y" || diffTotal="_"
+  [[ -n "$(diff source.facets eval.facets)" ]] && diffFacets="Y" || diffFacets="_"
+
+  similarity=$(jq ".similarity" line.json)
+  dataSimilarity=$(echo $similarity | jq ".dataSimilarity")
+  orderSimilarity=$(echo $similarity | jq ".orderSimilarity")
+  hybridDataSimilarity=$(echo $similarity | jq ".hybridDataSimilarity")
+  facetSimilarity=$(echo $similarity | jq ".facetSimilarity // 0.000")
+
+  cd ..
+
+  printf "%7s,$diffUid,$diffTotal,$diffFacets,%.3f,%.3f,%.3f,%.3f\n" $dir ${dataSimilarity} $orderSimilarity $hybridDataSimilarity $facetSimilarity
+done

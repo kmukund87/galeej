@@ -1,0 +1,28 @@
+#!/bin/bash
+lineNum=$1
+fileName=$2
+line $lineNum $fileName | jq "." -S > line.json
+
+jq ".sourceResponse.response.elements" line.json > source.elements.json
+jq ".[].uid" source.elements.json > source.elements.uid
+
+jq ".evalResponse.response.elements" line.json > eval.elements.json
+jq ".[].uid" eval.elements.json > eval.elements.uid
+
+sort source.elements.uid > source.elements.sorted.uid
+sort eval.elements.uid > eval.elements.sorted.uid
+
+jq '.request.tenantContext.originalBrokerRequest | {"request": .}' line.json > source_broker_request.json
+jq '.evalBrokerRequest | {"request": .}' line.json > eval_broker_request.json
+jq '.request | del(.tenantContext.originalBrokerRequest) | {"request": .}' line.json > eval_server_request.json
+
+jq '.sourceResponse.response.total' line.json > source.totalCount
+jq '.evalResponse.response.total' line.json > eval.totalCount
+
+jq ".sourceResponse.response.facetResponses" line.json > source.facets
+jq ".evalResponse.response.facetResponses" line.json > eval.facets
+
+
+jq ".sourceResponse.response.brokerResponse" -S line.json > source.broker.response.json
+jq ".evalResponse.response.brokerResponse" -S line.json > eval.broker.response.json
+

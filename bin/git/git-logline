@@ -8,9 +8,11 @@ date="%Cgreen%cr%Creset" # Relative date
 author="%C(bold blue)%an%Creset"
 
 #--graph is removed from the below command since it causes it to become very slow when local has downloaded a lot of remote branches
+#--first-parent: When merging master or other large branches into your development branch, the log will show the commits from the master beyond the merge instead of your branch. This flag forces git to show changes from your branch instead of master
 git \
-      -c color.ui=always log \
-      --pretty=format:"$hash%%$branches%%$message%%$date%%$author" \
+      -c color.ui=always log\
+      --first-parent \
+      --pretty=format:"$hash%%$date%%$author%%$branches%%$message" \
       --abbrev-commit \
       --graph \
       -10 \

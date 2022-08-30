@@ -1,0 +1,32 @@
+#!/bin/bash
+
+while [[ $# -gt 0 ]]; do
+  case $1 in
+    --connect-host)
+      connectHost="$2"
+      shift # past argument
+      shift # past value
+      ;;
+    --query)
+      query="$2"
+      shift # past argument
+      shift # past value
+      ;;
+  esac
+done
+
+connectHost=${connectHost:-'nhs'}
+
+# -o LogLevel=error 
+
+if [ -z "$query" ]
+then
+	ssh -t $connectHost <<-EOF
+		curli --dv-auth SELF "${@:1}"
+	EOF
+else
+	ssh -t $connectHost <<-EOF
+		curli --dv-auth SELF --fabric prod-ltx1 'd2://HostedSearch-hiringproject_index1_eval?action=search' -d '{"request":{"query":"$query", "pagingContext":{"start":0,"count":10}}}'
+	EOF
+fi
+

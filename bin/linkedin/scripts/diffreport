@@ -1,0 +1,22 @@
+#!/bin/bash
+
+touch forwardFieldDiffsTemp
+
+for dir in `ls -d line*`
+do
+
+  numEvalElements=$(jq '.evalResponse.response.elements | length' $dir/line.json )
+
+
+  if (( $numEvalElements > 1 ))
+  then
+    jq '([ .sourceResponse.response.elements[].viewFields | keys ] | flatten | unique) - ([ .evalResponse.response.elements[].viewFields | keys ] | flatten | unique) | .[]' $dir/line.json >> forwardFieldDiffsTemp
+  else
+    echo "no elements found in $dir"
+  fi
+
+done
+
+cat forwardFieldDiffsTemp | sort | uniq > forwardFieldDiffs
+
+rm forwardFieldDiffsTemp

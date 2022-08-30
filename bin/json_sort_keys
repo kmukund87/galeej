@@ -1,0 +1,3 @@
+#!/bin/bash
+jq -S "$1" > ~/temp/json_sort_keys.temp.json
+mv ~/temp/json_sort_keys.temp.json "$1"

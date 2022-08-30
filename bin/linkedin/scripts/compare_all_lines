@@ -1,0 +1,18 @@
+#!/bin/bash
+
+fileName=$1
+
+lineCount=$(wc -l < "$fileName")
+
+for lineNum in `seq 1 $lineCount`
+do
+  dirName=$(printf "line%02d" $lineNum)
+
+  echo "Processing $lineNum"
+  mkdir "$dirName" || continue
+  cd "$dirName" || exit
+  get_request "$lineNum" "../$fileName"
+
+  cd ..
+
+done
