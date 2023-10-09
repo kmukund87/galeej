@@ -1,0 +1,11 @@
+#!/bin/bash
+
+directories=$1
+
+while read -r dir_name
+do
+  cd $dir_name
+  echo "Rerunning $dir_name"
+  rerun
+  cd ..
+done < "$directories"

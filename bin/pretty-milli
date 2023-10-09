@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if [ -z "$1" ]
+then
+    while read input
+    do
+      python3 -c "from datetime import datetime; print(datetime.fromtimestamp($input/1000).strftime('%Y-%m-%d %H:%M:%S.%f'))"
+    done
+else
+    input=$1
+    python3 -c "from datetime import datetime; print(datetime.fromtimestamp($input/1000).strftime('%Y-%m-%d %H:%M:%S.%f'))"
+fi
+
+
+

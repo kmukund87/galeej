@@ -1,0 +1,2 @@
+#!/bin/sh
+open -na "LI IntelliJ IDEA 2021.3 Apple Silicon.app" --args "$@"

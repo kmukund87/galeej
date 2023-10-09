@@ -1,0 +1,21 @@
+#!/bin/bash
+
+dir=$1
+dir=${dir:-rerun}
+
+mkdir $dir || echo "Directory $dir already exists"
+
+if [[ ! -e $dir/source_broker_request.json ]]; then
+  cp source_broker_request.json $dir/
+fi
+if [[ ! -e $dir/eval_broker_request.json ]]; then
+  cp eval_broker_request.json $dir/
+fi
+
+cd $dir
+
+rm source.broker.response.json; rcurli --fabric prod-lor1 'd2://galene-hiringproject-main?action=search' -d @source_broker_request.json > source.broker.response.json
+rm eval.broker.response.json; rcurli --fabric prod-lor1 'https://lor1-app20839.prod.linkedin.com:6439/seas-broker/search?action=search' -d @eval_broker_request.json > eval.broker.response.json
+
+jq ".value.elements[].stringUid" eval.broker.response.json > eval.uid
+jq ".value.elements[].entity" source.broker.response.json | sed "s/.*:\([^:]*\)/\"\1/" > source.uid

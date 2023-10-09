@@ -1,0 +1,15 @@
+rcurli --fabric prod-lor1 'd2://galene-hiringproject-main?action=search' -d @source_broker_request.json > source.broker.response.prod-lor1.json
+rcurli --fabric prod-lor1 'https://lor1-app20839.prod.linkedin.com:6439/seas-broker/search?action=search' -d @eval_broker_request.json > eval.broker.response.prod-lor1.json
+
+rcurli --fabric prod-ltx1 'd2://galene-hiringproject-main?action=search' -d @source_broker_request.json > source.broker.response.prod-ltx1.json
+rcurli --fabric prod-ltx1 'https://ltx1-app60420.prod.linkedin.com:6439/seas-broker/search?action=search' -d @eval_broker_request.json > eval.broker.response.prod-ltx1.json
+
+rcurli --fabric prod-lva1 'd2://galene-hiringproject-main?action=search' -d @source_broker_request.json > source.broker.response.prod-lva1.json
+rcurli --fabric prod-lva1 'https://lva1-app56711.prod.linkedin.com:6439/seas-broker/search?action=search' -d @eval_broker_request.json > eval.broker.response.prod-lva1.json
+
+#curli --dv-auth SELF -k --fabric prod-lor1 'd2://galene-hiringproject-main?action=search' -d @source_broker_request.json > source.broker.response.prod-lor1.json
+#curli --dv-auth SELF -k --fabric prod-ltx1 'd2://galene-hiringproject-main?action=search' -d @source_broker_request.json > source.broker.response.prod-ltx1.json
+#curli --dv-auth SELF -k --fabric prod-lva1 'd2://galene-hiringproject-main?action=search' -d @source_broker_request.json > source.broker.response.prod-lva1.json
+#curli --dv-auth SELF -k --fabric prod-lva1 'https://lva1-app56711.prod.linkedin.com:6439/seas-broker/search?action=search' -d @eval_broker_request.json > eval.broker.response.prod-lva1.json
+#curli --dv-auth SELF -k --fabric prod-ltx1 'https://ltx1-app60420.prod.linkedin.com:6439/seas-broker/search?action=search' -d @eval_broker_request.json > eval.broker.response.prod-ltx1.json
+#curli --dv-auth SELF -k --fabric prod-lor1 'https://lor1-app20839.prod.linkedin.com:6439/seas-broker/search?action=search' -d @eval_broker_request.json > eval.broker.response.prod-lor1.json

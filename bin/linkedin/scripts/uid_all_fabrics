@@ -1,0 +1,6 @@
+jq ".value.elements[].stringUid" eval.broker.response.prod-lor1.json > eval.lor1.uid
+jq ".value.elements[].stringUid" eval.broker.response.prod-lva1.json > eval.lva1.uid
+jq ".value.elements[].stringUid" eval.broker.response.prod-ltx1.json > eval.ltx1.uid
+jq ".value.elements[].entity" source.broker.response.prod-ltx1.json | sed "s/urn:li:hiringProject://g" > source.ltx1.uid
+jq ".value.elements[].entity" source.broker.response.prod-lva1.json | sed "s/urn:li:hiringProject://g" > source.lva1.uid
+jq ".value.elements[].entity" source.broker.response.prod-lor1.json | sed "s/urn:li:hiringProject://g" > source.lor1.uid

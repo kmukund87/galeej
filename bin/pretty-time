@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [ -z "$1" ]
+then
+    read input
+else
+    input=$1
+fi
+
+date -jf "%s" $input +"%Y-%m-%d %H:%M"
